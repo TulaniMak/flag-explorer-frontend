@@ -1,3 +1,11 @@
+<div class="container">
+  <h1>Country Flags</h1>
+
+  <div *ngIf="loading" class="loading-state">
+    <mat-spinner diameter="40"></mat-spinner>
+    <span>Loading countries...</span>
+  </div>
+
 <div class="countries-grid">
   <div *ngFor="let country of countries" class="country-card"
        (mouseenter)="loadCountryDetails(country.name)">
@@ -16,4 +24,5 @@
       </p>
     </div>
   </div>
+</div>
 </div>
