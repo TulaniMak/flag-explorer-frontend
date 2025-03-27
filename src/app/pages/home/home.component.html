@@ -1,0 +1,19 @@
+<div class="countries-grid">
+  <div *ngFor="let country of countries" class="country-card"
+       (mouseenter)="loadCountryDetails(country.name)">
+    <img [src]="country.flagUrl" [alt]="country.name + ' flag'">
+    <h3>{{ country.name }}</h3>
+    
+    <div class="country-details">
+      <p *ngIf="country.capital">
+        <strong>Capital:</strong> {{ country.capital }}
+      </p>
+      <p *ngIf="country.population !== undefined">
+        <strong>Population:</strong> {{ country.population | number }}
+      </p>
+      <p *ngIf="!country.capital && country.population === undefined">
+        Click to load details...
+      </p>
+    </div>
+  </div>
+</div>
