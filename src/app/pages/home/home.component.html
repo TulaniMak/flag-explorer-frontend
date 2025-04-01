@@ -8,7 +8,7 @@
 
 <div class="countries-grid">
   <div *ngFor="let country of countries" class="country-card"
-       (mouseenter)="loadCountryDetails(country.name)">
+       (click)="loadCountryDetails(country.name)">
     <img [src]="country.flagUrl" [alt]="country.name + ' flag'">
     <h3>{{ country.name }}</h3>
     
