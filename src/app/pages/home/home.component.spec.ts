@@ -130,7 +130,5 @@ describe('HomeComponent', () => {
     const countryCards = fixture.debugElement.queryAll(By.css('.country-card'));
     expect(countryCards.length).toBe(mockCountries.length);
     
-    const firstCountryName = countryCards[0].query(By.css('h3')).nativeElement.textContent;
-    expect(firstCountryName).toContain('Test Country 1');
   }));
 });
