@@ -10,9 +10,11 @@
   <div *ngFor="let country of countries" class="country-card"
        (click)="loadCountryDetails(country.name)">
     <img [src]="country.flagUrl" [alt]="country.name + ' flag'">
-    <h3>{{ country.name }}</h3>
     
     <div class="country-details">
+      <p *ngIf="country.capital">
+        <strong>Name:</strong> {{ country.name }}
+      </p>
       <p *ngIf="country.capital">
         <strong>Capital:</strong> {{ country.capital }}
       </p>
